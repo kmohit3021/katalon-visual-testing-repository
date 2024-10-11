@@ -19,7 +19,9 @@ import org.openqa.selenium.Keys as Keys
 
 Mobile.startApplication('/Users/mohit/Documents/APK/APIDemos.apk', true)
 
-Mobile.tap(findTestObject('Object Repository/OR Mobile/android.widget.Button - OK'), 50, FailureHandling.CONTINUE_ON_FAILURE)
+Mobile.tap(findTestObject('OR Mobile/android.widget.Button - Continue-Choose what to allow'), 50, FailureHandling.OPTIONAL)
+
+Mobile.tap(findTestObject('Object Repository/OR Mobile/android.widget.Button - OK'), 50, FailureHandling.OPTIONAL)
 
 Mobile.tap(findTestObject('Object Repository/OR Mobile/android.widget.TextView - OK'), 50)
 
