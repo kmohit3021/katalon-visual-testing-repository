@@ -17,27 +17,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-Mobile.startApplication('/Users/mohit/Documents/APK/APIDemos.apk', true)
+WebUI.openBrowser('')
 
-Mobile.tap(findTestObject('OR Mobile/android.widget.Button - Continue-Choose what to allow'), 50, FailureHandling.OPTIONAL)
+WebUI.setViewPortSize(1500, 800)
 
-Mobile.tap(findTestObject('Object Repository/OR Mobile/android.widget.Button - OK'), 50, FailureHandling.OPTIONAL)
+WebUI.navigateToUrl('www.google.com')
 
-Mobile.tap(findTestObject('Object Repository/OR Mobile/android.widget.TextView - OK'), 50)
-
-Mobile.takeScreenshotAsCheckpoint('OKButton Page', [])
-
-Mobile.tap(findTestObject('Object Repository/OR Mobile/android.widget.TextView - API Demos'), 50)
-
-Mobile.takeScreenshotAsCheckpoint('APIDemos Page', [])
-
-Mobile.tap(findTestObject('Object Repository/OR Mobile/android.widget.TextView - App'), 50)
-
-Mobile.takeScreenshotAsCheckpoint('AppPage', [])
-
-Mobile.tap(findTestObject('Object Repository/OR Mobile/android.widget.TextView - Activity'), 50)
-
-Mobile.takeScreenshotAsCheckpoint('ActivityPage', [])
-
-Mobile.closeApplication()
+WebUI.takeFullPageScreenshotAsCheckpoint('Google')
 
