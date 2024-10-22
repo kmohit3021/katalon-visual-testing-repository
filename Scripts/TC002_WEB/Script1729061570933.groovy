@@ -19,9 +19,45 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.setViewPortSize(1200, 700)
+WebUI.navigateToUrl('https://katalon-demo-cura.herokuapp.com/')
+WebUI.delay(5)
+WebUI.takeFullPageScreenshotAsCheckpoint('Make Appointment Page')
 
-WebUI.navigateToUrl('www.google.com')
+WebUI.click(findTestObject('Object Repository/OR Web/Page_CURA Healthcare Service/a_Make Appointment'))
 
-WebUI.takeFullPageScreenshotAsCheckpoint('Google')
+WebUI.takeFullPageScreenshotAsCheckpoint('Login Page')
+
+
+WebUI.setText(findTestObject('Object Repository/OR Web/Page_CURA Healthcare Service/input_Username_username'), 'John Doe')
+
+
+WebUI.setEncryptedText(findTestObject('Object Repository/OR Web/Page_CURA Healthcare Service/input_Password_password'), 
+    'g3/DOGG74jC3Flrr3yH+3D/yKbOqqUNM')
+
+WebUI.click(findTestObject('Object Repository/OR Web/Page_CURA Healthcare Service/button_Login'))
+
+WebUI.delay(5)
+
+WebUI.takeFullPageScreenshotAsCheckpoint('Before Make Appointment Page')
+
+WebUI.selectOptionByValue(findTestObject('Object Repository/OR Web/Page_CURA Healthcare Service/select_Tokyo CURA Healthcare Center        _5b4107'), 
+    'Seoul CURA Healthcare Center', true)
+
+WebUI.click(findTestObject('Object Repository/OR Web/Page_CURA Healthcare Service/input_Apply for hospital readmission_hospit_63901f'))
+
+WebUI.click(findTestObject('Object Repository/OR Web/Page_CURA Healthcare Service/input_Medicaid_programs'))
+
+WebUI.click(findTestObject('Object Repository/OR Web/Page_CURA Healthcare Service/input_Visit Date (Required)_visit_date'))
+
+WebUI.click(findTestObject('Object Repository/OR Web/Page_CURA Healthcare Service/td_day'))
+
+WebUI.setText(findTestObject('Object Repository/OR Web/Page_CURA Healthcare Service/textarea_Comment_comment'), 'Test Demo')
+
+WebUI.takeFullPageScreenshotAsCheckpoint('After Make Appointment Page')
+
+WebUI.click(findTestObject('Object Repository/OR Web/Page_CURA Healthcare Service/button_Book Appointment'))
+
+WebUI.takeFullPageScreenshotAsCheckpoint('Book Appointment Page')
+
+WebUI.click(findTestObject('Object Repository/OR Web/Page_CURA Healthcare Service/a_Go to Homepage'))
 

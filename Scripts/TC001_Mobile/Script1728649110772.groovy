@@ -25,11 +25,11 @@ Mobile.tap(findTestObject('Object Repository/OR Mobile/android.widget.Button - O
 
 Mobile.tap(findTestObject('Object Repository/OR Mobile/android.widget.TextView - OK'), 50)
 
-Mobile.takeScreenshotAsCheckpoint('OKButton Page', [])
+Mobile.takeScreenshotAsCheckpoint('OKButtonPage', [])
 
 Mobile.tap(findTestObject('Object Repository/OR Mobile/android.widget.TextView - API Demos'), 50)
 
-Mobile.takeScreenshotAsCheckpoint('APIDemos Page', [])
+Mobile.takeScreenshotAsCheckpoint('APIDemosPage', [])
 
 Mobile.tap(findTestObject('Object Repository/OR Mobile/android.widget.TextView - App'), 50)
 
